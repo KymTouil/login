@@ -1,0 +1,34 @@
+______ les fichiers ______
+
+index.js point d'entrée de l'app, écrit en es6
+babel.js traduire index.js en es5
+
+
+
+
+______ automatiser le lancement ______
+
+automatiser le lancement du script (si nbx arguments, etc...)
+dans package.json#scripts
+	rajouter "commande": "node index.js --arg arg1 arg2"
+si commande = start: npm start (commande pré-enregistrée dans npm)
+
+
+______ installer babel ______
+
+node utilise es5, Anas veut que nous codions en es6
+gulpfile
+npm ...
+installer babel dans l'appli:
+require ('babel-register')({ preset: ['es2015']});
+npm install --save-dev babel-register
+npm install --save-dev babel-preset-es2015
+--save-dev: le module ne sera installé que pour les développeurs, pas pour les utilisateurs.
+presets: ce que babel doit changer
+"babel ./src/*.js ./private/*.js"
+
+
+______ installer express ______
+
+npm install --save express
+
